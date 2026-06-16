@@ -17,6 +17,16 @@ Sistema simples de caixa eletrônico desenvolvido em Python.
 * Validação de saques inválidos
 * Confirmação de saída do programa
 
+### Projeto 02 - Sistema de Login 🚧
+
+Sistema de autenticação desenvolvido em Python.
+
+**Objetivos:**
+
+* Validar usuário e senha
+* Controlar tentativas de acesso
+* Bloquear acesso após múltiplas tentativas inválidas
+
 ## Tecnologias
 
 * Python
