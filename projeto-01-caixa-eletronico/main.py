@@ -11,11 +11,13 @@ print('4 - Sair')
 
 continuar = True
 
+# Loop principal do sistema
 while continuar:
     opção = str(input('Escolha sua opção: '))
-    
+
     if opção == '1':
         print(f'Seu saldo é igual a R${saldo:.2f} ')
+    # Operação de depósito              
     elif opção == '2':
         deposito = float(input(('Qual valor deseja depositar? R$')))
         if deposito <= 0:
@@ -24,6 +26,7 @@ while continuar:
             saldo += deposito
             print('Depósito Realizado com Sucesso!')
             print(f'Saldo Atualizado: R${saldo:.2f}')
+    # Operação de saque
     elif opção == '3':
         saque = float(input('Qual valor deseja sacar? R$'))
         if saque <= 0:
@@ -33,6 +36,7 @@ while continuar:
         else:
             saldo -= saque
             print(f'Saldo Atualizado: R${saldo:.2f}')
+    # Confirmação de saída
     elif opção == '4':
         sair = ' '
         while sair not in 'SN':
