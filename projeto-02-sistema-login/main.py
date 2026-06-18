@@ -10,6 +10,13 @@ while True:
     
     usuario = input('Usuario: ')
     senha = input('Senha: ')
+
+    if usuario != usuario_cadastrado and senha != senha_cadastrada:
+        print('Usuário e senha incorretos')
+    elif usuario != usuario_cadastrado:
+        print('Usuário incorreto')
+    elif senha != senha_cadastrada:
+        print('Senha incorreta')
     
     if usuario == usuario_cadastrado and senha == senha_cadastrada:
         print('Login realizado com sucesso!')
