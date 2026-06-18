@@ -4,7 +4,7 @@ senha_cadastrada = '1234'
 
 print('==== LOGIN ====')
 
-tentativas_invalidas = 0
+tentativas_restantes = 3
 
 while True:
     
@@ -16,10 +16,12 @@ while True:
         break
        
     else:
-        tentativas_invalidas += 1
-        print('Tente Novamente')
-        # Bloqueia o acesso após 3 erros 
-        if tentativas_invalidas >= 3:
+        tentativas_restantes -= 1
+
+        if tentativas_restantes == 0:
             print('BLOQUEADO')
             break
+        print ('=-'*10)
+        print('Tente Novamente')
+        print(f'Restam {tentativas_restantes} tentativas.')
     
