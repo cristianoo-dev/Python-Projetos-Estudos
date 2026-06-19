@@ -24,11 +24,16 @@ while True:
        
     else:
         tentativas_restantes -= 1
+        print ('=-'*10)
 
         if tentativas_restantes == 0:
             print('BLOQUEADO')
             break
-        print ('=-'*10)
+
         print('Tente Novamente')
-        print(f'Restam {tentativas_restantes} tentativas.')
-    
+
+        if tentativas_restantes >= 2:
+            print(f'Restam {tentativas_restantes} tentativas.')
+
+        if tentativas_restantes == 1:
+            print('Resta 1 tentativa')   
