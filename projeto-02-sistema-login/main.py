@@ -2,11 +2,12 @@
 usuario_cadastrado = 'admin'
 senha_cadastrada = '1234'
 
-print('==== LOGIN ====')
-
 tentativas_restantes = 3
+print('==== LOGIN ====')
+print(f'Você possui {tentativas_restantes} tentativas para acessar o sistema')
 
 while True:
+    print('=-'*10)   
     usuario = input('Usuario: ').strip()
     senha = input('Senha: ').strip()
 
