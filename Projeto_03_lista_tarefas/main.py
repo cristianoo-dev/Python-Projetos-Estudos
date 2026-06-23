@@ -11,13 +11,14 @@ print('''1 - Adionar Tarefa
 continuar = True
 
 while continuar:    
-    opção = str(input('Escolha uma opção: '))
+    opção = input('Escolha uma opção: ')
     if opção == '1':
         tarefas.append(str(input('Digite a tarefa: ')))
         
     elif opção == '2':
-        print(tarefas)
-        
+        for i, tarefa in enumerate(tarefas):
+            print(f'{i + 1} - {tarefa}')
+
     elif opção == '3':
         sair = ' '
         while sair not in 'SN':
