@@ -33,7 +33,15 @@ Sistema de autenticação desenvolvido em Python.
 
 ### Projeto 03 - Lista de Tarefas 🚧
 
-Projeto em desenvolvimento.
+Sistema simples de gerenciamento de tarefas desenvolvido em Python.
+
+**Funcionalidades:**
+
+* Menu interativo no terminal
+* Adição de tarefas em lista
+* Listagem de tarefas
+* Estrutura de repetição para manter o sistema ativo
+* Base para futuras validações e melhorias
 
 ## Tecnologias
 
