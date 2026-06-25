@@ -38,10 +38,12 @@ Sistema simples de gerenciamento de tarefas desenvolvido em Python.
 **Funcionalidades:**
 
 * Menu interativo no terminal
-* Adição de tarefas em lista
-* Listagem de tarefas
-* Estrutura de repetição para manter o sistema ativo
-* Base para futuras validações e melhorias
+* Adição de tarefas com validação de entrada
+* Listagem de tarefas com numeração
+* Tratamento de lista vazia
+* Controle de fluxo com loop principal (`while`)
+* Confirmação para saída do sistema
+* Organização e documentação do código com comentários
 
 ## Tecnologias
 
