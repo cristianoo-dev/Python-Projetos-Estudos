@@ -17,6 +17,8 @@ Sistema simples de caixa eletrônico desenvolvido em Python.
 * Validação de saques inválidos
 * Confirmação de saída do programa
 
+---
+
 ### Projeto 02 - Sistema de Login ✅
 
 Sistema de autenticação desenvolvido em Python.
@@ -31,7 +33,9 @@ Sistema de autenticação desenvolvido em Python.
 * Tratamento de entradas vazias
 * Exibição das tentativas disponíveis ao usuário
 
-### Projeto 03 - Lista de Tarefas 🚧
+---
+
+### Projeto 03 - Lista de Tarefas ✅
 
 Sistema simples de gerenciamento de tarefas desenvolvido em Python.
 
@@ -44,6 +48,20 @@ Sistema simples de gerenciamento de tarefas desenvolvido em Python.
 * Controle de fluxo com loop principal (`while`)
 * Confirmação para saída do sistema
 * Organização e documentação do código com comentários
+
+---
+
+### Projeto 04 - Cadastro de Pessoas 🚧
+
+Sistema em desenvolvimento para cadastro de pessoas utilizando estruturas de dados em Python.
+
+**Objetivo:**
+
+* Introdução ao uso de dicionários
+* Armazenamento de dados estruturados (nome, idade e cidade)
+* Prática de manipulação de dados em memória
+
+---
 
 ## Tecnologias
 
