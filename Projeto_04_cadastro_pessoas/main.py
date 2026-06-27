@@ -4,11 +4,10 @@ print('=' * 25)
 print('CADASTRO DE PESSOAS')
 print('=' * 25)
 
-continuar = True
+nome = input('Nome: ').strip()
+idade = int(input('Idade: '))
+cidade = input('Cidade: ').strip()
 
-while continuar:
-    print('''1 - Cadastrar Pessoa
-2 - Listar Pessoas
-3 - Sair''')
+pessoa = {'nome': nome, 'idade': idade, 'cidade': cidade}
 
-    opcao = input('Escolha uma opção: ')
+print(pessoa['nome'])
