@@ -3,11 +3,13 @@
 print('=' * 25)
 print('CADASTRO DE PESSOAS')
 print('=' * 25)
+pessoa = {}
 
-nome = input('Nome: ').strip()
-idade = int(input('Idade: '))
-cidade = input('Cidade: ').strip()
+pessoa['Nome'] = input('Nome: ').strip()
+pessoa['Idade'] = int(input('Idade: '))
+pessoa['Cidade'] = input('Cidade: ').strip()
 
-pessoa = {'nome': nome, 'idade': idade, 'cidade': cidade}
+print('\n=== DADOS CADASTRADOS ===')
 
-print(pessoa['nome'])
+for campo, dado in pessoa.items():
+    print(f'{campo}: {dado}')
