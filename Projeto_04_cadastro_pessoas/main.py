@@ -5,9 +5,23 @@ print('CADASTRO DE PESSOAS')
 print('=' * 25)
 pessoa = {}
 
-pessoa['Nome'] = input('Nome: ').strip()
+while True:
+    nome = input('Nome: ').strip()
+    if nome == '':
+        print('ERRO! O nome não pode estar vazio.')
+    else:
+        pessoa['Nome'] = nome
+        break
+
 pessoa['Idade'] = int(input('Idade: '))
-pessoa['Cidade'] = input('Cidade: ').strip()
+
+while True:
+    cidade = input('Cidade: ').strip()
+    if cidade  == '':
+        print('ERRO! A cidade não pode estar vazia')
+    else:
+        pessoa['Cidade'] = cidade
+        break
 
 print('\n=== DADOS CADASTRADOS ===')
 
