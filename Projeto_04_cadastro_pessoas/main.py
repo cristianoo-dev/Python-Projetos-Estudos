@@ -13,8 +13,13 @@ while True:
         pessoa['Nome'] = nome
         break
 
-pessoa['Idade'] = int(input('Idade: '))
-
+while True:
+    try:
+        pessoa['Idade'] = int(input('Idade: '))
+        break
+    except:
+        print('ERRO! Digite apenas números.')
+      
 while True:
     cidade = input('Cidade: ').strip()
     if cidade  == '':
