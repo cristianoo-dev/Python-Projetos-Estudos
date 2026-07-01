@@ -3,30 +3,50 @@
 print('=' * 25)
 print('CADASTRO DE PESSOAS')
 print('=' * 25)
-pessoa = {}
 
-while True:
-    nome = input('Nome: ').strip()
-    if nome == '':
-        print('ERRO! O nome não pode estar vazio.')
-    else:
-        pessoa['Nome'] = nome
-        break
+pessoas = []
 
-while True:
-    try:
-        pessoa['Idade'] = int(input('Idade: '))
-        break
-    except:
-        print('ERRO! Digite apenas números.')
+continuar = True
+
+while continuar:
+    print('''1 - Adionar Pessoa
+2 - Listar Pessoa
+3 - Sair''')
+
+opcao = input('Escolha uma opção: ')
+
+if opcao == '1':
+    pessoa = {}
+    while True:
+        nome = input('Nome: ').strip()
+        if nome == '':
+            print('ERRO! O nome não pode estar vazio.')
+        else:
+            pessoa['Nome'] = nome
+            break
+
+    while True:
+        try:
+            pessoa['Idade'] = int(input('Idade: '))
+            break
+        except:
+            print('ERRO! Digite apenas números.')
       
-while True:
-    cidade = input('Cidade: ').strip()
-    if cidade  == '':
-        print('ERRO! A cidade não pode estar vazia')
-    else:
-        pessoa['Cidade'] = cidade
-        break
+    while True:
+        cidade = input('Cidade: ').strip()
+        if cidade  == '':
+            print('ERRO! A cidade não pode estar vazia')
+        else:
+            pessoa['Cidade'] = cidade
+            break
+    pessoas.append(pessoa)
+    print('\nPessoa cadastrada com sucesso.')    
+
+if opcao == '2':
+    pass
+
+if opcao == '3':
+    continuar = False
 
 print('\n=== DADOS CADASTRADOS ===')
 
