@@ -9,46 +9,48 @@ pessoas = []
 continuar = True
 
 while continuar:
-    print('''1 - Adionar Pessoa
+    print('''1 - Adicionar Pessoa
 2 - Listar Pessoa
 3 - Sair''')
 
-opcao = input('Escolha uma opção: ')
+    opcao = input('Escolha uma opção: ')
 
-if opcao == '1':
-    pessoa = {}
-    while True:
-        nome = input('Nome: ').strip()
-        if nome == '':
-            print('ERRO! O nome não pode estar vazio.')
-        else:
-            pessoa['Nome'] = nome
-            break
+    if opcao == '1':
+        pessoa = {}
+        while True:
+            nome = input('Nome: ').strip()
+            if nome == '':
+                print('ERRO! O nome não pode estar vazio.')
+            else:
+                pessoa['Nome'] = nome
+                break
 
-    while True:
-        try:
-            pessoa['Idade'] = int(input('Idade: '))
-            break
-        except:
-            print('ERRO! Digite apenas números.')
-      
-    while True:
-        cidade = input('Cidade: ').strip()
-        if cidade  == '':
-            print('ERRO! A cidade não pode estar vazia')
-        else:
-            pessoa['Cidade'] = cidade
-            break
-    pessoas.append(pessoa)
-    print('\nPessoa cadastrada com sucesso.')    
+        while True:
+            try:
+                pessoa['Idade'] = int(input('Idade: '))
+                break
+            except:
+                print('ERRO! Digite apenas números.')
+        
+        while True:
+            cidade = input('Cidade: ').strip()
+            if cidade  == '':
+                print('ERRO! A cidade não pode estar vazia')
+            else:
+                pessoa['Cidade'] = cidade
+                break
+        pessoas.append(pessoa)
+        print('\nPessoa cadastrada com sucesso.')    
 
-if opcao == '2':
-    pass
+    elif opcao == '2':
+        if not pessoas:
+            print('Nenhuma cadastro foi realizado.')
+        else:            
+            print('\n=== DADOS CADASTRADOS ===')
+            for pessoa in pessoas:
+                for campo, dado in pessoa.items():
+                    print(f'{campo}: {dado}')
+                print()
 
-if opcao == '3':
-    continuar = False
-
-print('\n=== DADOS CADASTRADOS ===')
-
-for campo, dado in pessoa.items():
-    print(f'{campo}: {dado}')
+    elif opcao == '3':
+        continuar = False
