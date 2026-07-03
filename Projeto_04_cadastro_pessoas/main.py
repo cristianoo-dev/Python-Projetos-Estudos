@@ -45,9 +45,14 @@ while continuar:
     elif opcao == '2':
         if not pessoas:
             print('Nenhuma cadastro foi realizado.')
-        else:            
-            print('\n=== DADOS CADASTRADOS ===')
-            for pessoa in pessoas:
+        else: 
+            print('='*20)           
+            print('PESSOAS CADASTRADAS')
+            print('='*20)
+            print(f'Total de pessoas cadastradas: {len(pessoas)}')
+            print()
+            for i, pessoa in enumerate(pessoas):
+                print(f'===== PESSOA {i + 1} =====')
                 for campo, dado in pessoa.items():
                     print(f'{campo}: {dado}')
                 print()
