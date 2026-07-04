@@ -58,4 +58,17 @@ while continuar:
                 print()
 
     elif opcao == '3':
-        continuar = False
+        while True:
+            resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
+            if resposta == '':
+                print('Digite S ou N.')
+            else:
+                resposta = resposta[0]
+                if resposta == 'S':
+                    print('Saindo...')
+                    continuar = False
+                    break
+                    
+                elif resposta =='N':
+                    print('Operação cancelada.')
+                    break
