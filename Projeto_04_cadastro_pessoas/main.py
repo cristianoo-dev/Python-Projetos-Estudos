@@ -11,7 +11,8 @@ continuar = True
 while continuar:
     print('''1 - Adicionar Pessoa
 2 - Listar Pessoa
-3 - Sair''')
+3 - Buscar pessoa          
+4 - Sair''')
 
     opcao = input('Escolha uma opção: ')
 
@@ -56,8 +57,18 @@ while continuar:
                 for campo, dado in pessoa.items():
                     print(f'{campo}: {dado}')
                 print()
-
     elif opcao == '3':
+        nome_busca = input('Digite o nome da pessoa: ').strip()
+        encontrou = False
+        for pessoa in pessoas:
+            if nome_busca == pessoa['Nome']:
+                encontrou = True
+                for campo, dado in pessoa.items():
+                    print(f'{campo}: {dado}')
+        if not encontrou:
+            print('Pessoa não encontrada')   
+       
+    elif opcao == '4':
         while True:
             resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
             if resposta == '':
@@ -72,3 +83,4 @@ while continuar:
                 elif resposta =='N':
                     print('Operação cancelada.')
                     break
+print('Sistema Finalizado')
