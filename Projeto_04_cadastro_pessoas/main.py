@@ -11,8 +11,9 @@ continuar = True
 while continuar:
     print('''1 - Adicionar Pessoa
 2 - Listar Pessoa
-3 - Buscar pessoa          
-4 - Sair''')
+3 - Buscar Pessoa   
+4 - Remover Pessoa       
+5 - Sair''')
 
     opcao = input('Escolha uma opção: ')
 
@@ -67,8 +68,20 @@ while continuar:
                     print(f'{campo}: {dado}')
         if not encontrou:
             print('Pessoa não encontrada')   
-       
+
     elif opcao == '4':
+        nome_remover = input('Qual pessoa deseja remover da lista: ').strip()
+        encontrou = False
+        for pessoa in pessoas:
+            if nome_remover == pessoa['Nome']:
+                pessoas.remove(pessoa)
+                encontrou = True
+                print('Pessoa removida com sucesso.')
+                break
+        if not encontrou:
+            print('Pessoa não encontrada')
+
+    elif opcao == '5':
         while True:
             resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
             if resposta == '':
@@ -79,7 +92,7 @@ while continuar:
                     print('Saindo...')
                     continuar = False
                     break
-                    
+
                 elif resposta =='N':
                     print('Operação cancelada.')
                     break
