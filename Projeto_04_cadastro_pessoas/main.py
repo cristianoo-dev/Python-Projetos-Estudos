@@ -1,13 +1,15 @@
 # Sistema de Cadastro de Pessoas
-
 print('=' * 25)
 print('CADASTRO DE PESSOAS')
 print('=' * 25)
 
+# Lista que armazena os cadastros
 pessoas = []
 
+# Controla a execução do programa
 continuar = True
 
+# Loop principal do sistema
 while continuar:
     print('''1 - Adicionar Pessoa
 2 - Listar Pessoa
@@ -17,9 +19,10 @@ while continuar:
 6 - Sair''')
 
     opcao = input('Escolha uma opção: ')
-
+    # Adiciona uma nova pessoa
     if opcao == '1':
         pessoa = {}
+        # Validação do nome
         while True:
             nome = input('Nome: ').strip()
             if nome == '':
@@ -27,24 +30,24 @@ while continuar:
             else:
                 pessoa['Nome'] = nome
                 break
-
+        # Validação da idade
         while True:
             try:
                 pessoa['Idade'] = int(input('Idade: '))
                 break
             except:
                 print('ERRO! Digite apenas números.')
-        
+        # Validação da cidade
         while True:
             cidade = input('Cidade: ').strip()
-            if cidade  == '':
+            if cidade == '':
                 print('ERRO! A cidade não pode estar vazia')
             else:
                 pessoa['Cidade'] = cidade
                 break
         pessoas.append(pessoa)
         print('\nPessoa cadastrada com sucesso.')    
-
+    # Lista todas as pessoas cadastradas
     elif opcao == '2':
         if not pessoas:
             print('Nenhuma pessoa foi cadastrada.')
@@ -59,7 +62,7 @@ while continuar:
                 for campo, dado in pessoa.items():
                     print(f'{campo}: {dado}')
                 print()
-
+    # Busca uma pessoa pelo nome
     elif opcao == '3':
         nome_busca = input('Digite o nome da pessoa: ').strip()
         encontrou = False
@@ -71,7 +74,7 @@ while continuar:
                 break
         if not encontrou:
             print('Pessoa não encontrada.')   
-
+    # Remove uma pessoa cadastrada
     elif opcao == '4':
         nome_remover = input('Qual pessoa deseja remover da lista: ').strip()
         encontrou = False
@@ -83,7 +86,7 @@ while continuar:
                 break
         if not encontrou:
             print('Pessoa não encontrada.')
-
+    # Edita os dados de uma pessoa
     elif opcao == '5':
         nome_editar = input('Qual pessoa deseja editar: ').strip()
         encontrou = False
@@ -119,7 +122,7 @@ while continuar:
                 elif editar == '3':
                     while True:
                         cidade = input('Cidade: ').strip()
-                        if cidade  == '':
+                        if cidade == '':
                             print('ERRO! A cidade não pode estar vazia')
                         else:
                             pessoa['Cidade'] = cidade
@@ -129,7 +132,7 @@ while continuar:
                 else:
                     print('Opção Inválida.')
                     break
-
+    # Encerra o programa                 
     elif opcao == '6':
         while True:
             resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
@@ -142,10 +145,10 @@ while continuar:
                     continuar = False
                     break
 
-                elif resposta =='N':
+                elif resposta == 'N':
                     print('Operação cancelada.')
                     break
     else:
         print('Opção inválida.')
-        
-print('Sistema Finalizado')
+
+print('Sistema finalizado')
