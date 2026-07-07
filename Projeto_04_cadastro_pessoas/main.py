@@ -12,7 +12,6 @@ while continuar:
     print('''1 - Adicionar Pessoa
 2 - Listar Pessoa
 3 - Buscar Pessoa   
-4 - Remover Pessoa       
 4 - Remover Pessoa
 5 - Editar Pessoa    
 6 - Sair''')
