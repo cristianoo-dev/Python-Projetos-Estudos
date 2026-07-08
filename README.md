@@ -51,15 +51,22 @@ Sistema simples de gerenciamento de tarefas desenvolvido em Python.
 
 ---
 
-### Projeto 04 - Cadastro de Pessoas 🚧
+### Projeto 04 - Cadastro de Pessoas ✅
 
-Sistema em desenvolvimento para cadastro de pessoas utilizando estruturas de dados em Python.
+Sistema de cadastro de pessoas desenvolvido em Python para praticar listas, dicionários e manipulação de dados.
 
-**Objetivo:**
+**Funcionalidades:**
 
-* Introdução ao uso de dicionários
-* Armazenamento de dados estruturados (nome, idade e cidade)
-* Prática de manipulação de dados em memória
+* Cadastro de pessoas (nome, idade e cidade)
+* Listagem de todos os cadastros
+* Busca de pessoas por nome
+* Edição de cadastros
+* Remoção de pessoas cadastradas
+* Validação de entradas
+* Tratamento de erros com `try/except`
+* Tratamento de opções inválidas
+* Confirmação para saída do sistema
+* Organização e documentação do código com comentários
 
 ---
 
