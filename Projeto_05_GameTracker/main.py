@@ -1,22 +1,6 @@
 print("Bem-vindo ao GameTracker!")
 
-jogos = []
-
-continuar = True
-
-while continuar:
-    print('='*20)
-    print('=== Game Tracker ===')
-    print('='*20)
-    print('1 - Cadastrar jogo')
-    print('2 - Listar jogos')
-    print('3 - CBuscar jogo')
-    print('4 - Alterar status')
-    print('5 - Remover jogo')
-    print('6 - Sair')
-    print('='*20)
-    opcao = input('Escolha uma opção: ')
-    if opcao == '1':
+def cadastrar_jogo():
         jogo = {}
         while True:
             nome_jogo = input('Nome do jogo: ').strip()
@@ -25,7 +9,6 @@ while continuar:
             else:
                 jogo['Nome'] = nome_jogo
                 break
-        
         while True:
             plataforma = input('Plataforma: ').strip()
             if plataforma == '':
@@ -33,7 +16,6 @@ while continuar:
             else:
                 jogo['Plataforma'] = plataforma
                 break
-
         while True:
             print('\nEscolha o status')
             print('1 - Quero jogar')
@@ -54,10 +36,29 @@ while continuar:
                 jogo['Status'] = 'Abandonado'
                 break
             else:
-                print('Opção inválida.')
-                   
+                print('Opção inválida.')     
+        return jogo
+
+jogos = []
+
+continuar = True
+
+while continuar:
+    print('='*20)
+    print('=== Game Tracker ===')
+    print('='*20)
+    print('1 - Cadastrar jogo')
+    print('2 - Listar jogos')
+    print('3 - Buscar jogo')
+    print('4 - Alterar status')
+    print('5 - Remover jogo')
+    print('6 - Sair')
+    print('='*20)
+    opcao = input('Escolha uma opção: ')
+    if opcao == '1':
+        jogo = cadastrar_jogo()
         jogos.append(jogo)
-        print('\nJogo cadastrado com sucesso.')      
+        print('\nJogo cadastrado com sucesso.')
 
     elif opcao == '2':
         print("Funcionalidade em desenvolvimento.")
