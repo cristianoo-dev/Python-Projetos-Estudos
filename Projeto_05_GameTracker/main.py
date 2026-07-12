@@ -39,6 +39,22 @@ def cadastrar_jogo():
                 print('Opção inválida.')     
         return jogo
 
+def listar_jogos():
+    if not jogos:
+        print('Nenhum jogo cadastrado.')
+        return
+
+    print('='*20)           
+    print('JOGOS CADASTRADOS')
+    print('='*20)
+    print(f'Total de jogos cadastrados: {len(jogos)}')
+    print()
+    for i, jogo in enumerate(jogos):
+        print(f'===== JOGO {i + 1} =====')
+        for campo, dado in jogo.items():
+            print(f'{campo}: {dado}')
+        print()
+    
 jogos = []
 
 continuar = True
@@ -61,7 +77,7 @@ while continuar:
         print('\nJogo cadastrado com sucesso.')
 
     elif opcao == '2':
-        print("Funcionalidade em desenvolvimento.")
+        listar_jogos()
 
     elif opcao == '3':
         print("Funcionalidade em desenvolvimento.")
