@@ -54,7 +54,25 @@ def listar_jogos():
         for campo, dado in jogo.items():
             print(f'{campo}: {dado}')
         print()
-    
+
+def buscar_jogo():
+        while True:
+            nome_busca = input('Digite o nome do jogo: ').strip()
+            if nome_busca == '':
+                print('ERRO! O nome do jogo não pode estar vazio.')
+            else:
+                break
+        encontrou = False
+        for jogo in jogos:
+            if nome_busca.casefold() == jogo['Nome'].casefold():
+                encontrou = True
+                print('JOGO ENCONTRADO')
+                for campo, dado in jogo.items():
+                    print(f'{campo}: {dado}')
+                break
+        if not encontrou:
+            print('Jogo não encontrado.') 
+      
 jogos = []
 
 continuar = True
@@ -80,7 +98,7 @@ while continuar:
         listar_jogos()
 
     elif opcao == '3':
-        print("Funcionalidade em desenvolvimento.")
+        buscar_jogo()
 
     elif opcao == '4':
         print("Funcionalidade em desenvolvimento.")
