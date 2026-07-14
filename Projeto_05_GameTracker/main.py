@@ -1,7 +1,9 @@
 print("Bem-vindo ao GameTracker!")
 
+# Cadastra um novo jogo solicitando as informações ao usuário.
 def cadastrar_jogo():
         jogo = {}
+        # Solicita o nome do jogo até que um valor válido seja informado.
         while True:
             nome_jogo = input('Nome do jogo: ').strip()
             if nome_jogo == '':
@@ -9,6 +11,7 @@ def cadastrar_jogo():
             else:
                 jogo['Nome'] = nome_jogo
                 break
+        # Solicita a plataforma até que um valor válido seja informado.
         while True:
             plataforma = input('Plataforma: ').strip()
             if plataforma == '':
@@ -16,6 +19,7 @@ def cadastrar_jogo():
             else:
                 jogo['Plataforma'] = plataforma
                 break
+        # Exibe as opções de status e valida a escolha do usuário.
         while True:
             print('\nEscolha o status')
             print('1 - Quero jogar')
@@ -39,23 +43,28 @@ def cadastrar_jogo():
                 print('Opção inválida.')     
         return jogo
 
+# Exibe todos os jogos cadastrados.
 def listar_jogos():
+    # Verifica se existem jogos cadastrados.
     if not jogos:
         print('Nenhum jogo cadastrado.')
         return
-
+    # Exibe o cabeçalho da listagem.
     print('='*20)           
     print('JOGOS CADASTRADOS')
     print('='*20)
     print(f'Total de jogos cadastrados: {len(jogos)}')
     print()
+    # Percorre a lista e exibe as informações de cada jogo.
     for i, jogo in enumerate(jogos):
         print(f'===== JOGO {i + 1} =====')
         for campo, dado in jogo.items():
             print(f'{campo}: {dado}')
         print()
 
+# Busca um jogo pelo nome informado pelo usuário.
 def buscar_jogo():
+        # Solicita o nome do jogo até que um valor válido seja informado.
         while True:
             nome_busca = input('Digite o nome do jogo: ').strip()
             if nome_busca == '':
@@ -63,6 +72,7 @@ def buscar_jogo():
             else:
                 break
         encontrou = False
+        # Percorre a lista de jogos em busca de uma correspondência.
         for jogo in jogos:
             if nome_busca.casefold() == jogo['Nome'].casefold():
                 encontrou = True
@@ -70,13 +80,14 @@ def buscar_jogo():
                 for campo, dado in jogo.items():
                     print(f'{campo}: {dado}')
                 break
+        # Informa caso nenhum jogo tenha sido encontrado.
         if not encontrou:
             print('Jogo não encontrado.') 
       
 jogos = []
 
 continuar = True
-
+# Loop principal do sistema.
 while continuar:
     print('='*20)
     print('=== Game Tracker ===')
@@ -107,6 +118,7 @@ while continuar:
         print("Funcionalidade em desenvolvimento.")
 
     elif opcao == '6':
+        # Solicita confirmação antes de encerrar o programa.
         while True:
             resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
             if resposta == '':
