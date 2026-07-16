@@ -90,7 +90,7 @@ def alterar_status():
     while True:
         nome_jogo = input('Digite o nome do jogo: ').strip()
         if nome_jogo == '':
-            print('Erro! O nome do jogo não pode estar vazio.')
+            print('ERRO! O nome do jogo não pode estar vazio.')
         else:
             break
     encontrou = False
@@ -128,10 +128,47 @@ def alterar_status():
     # Informa caso nenhum jogo tenha sido encontrado.     
     if not encontrou:
         print('Jogo não encontrado.')
-      
+
+# Remove um jogo cadastrado.
+def deletar_jogo():
+    # Solicita o nome do jogo até que um valor válido seja informado.
+    while True:
+        nome_remover = input('Digite o nome do jogo: ').strip()
+        if nome_remover == '':
+            print('ERRO! O nome do jogo não pode estar vazio.')
+        else:
+            break
+    encontrou = False
+    # Percorre a lista de jogos em busca do jogo informado.
+    for jogo in jogos:
+        if nome_remover.casefold() == jogo['Nome'].casefold():
+            encontrou = True
+            print('JOGO ENCONTRADO')
+            for campo, dado in jogo.items():
+                print(f'{campo}: {dado}')
+            # Solicita a confirmação do usuário antes de remover o jogo.
+            while True:
+                resposta = input('Deseja realmente remover este jogo? [S/N] ').strip().upper()
+                if resposta == '':
+                    print('Digite S ou N.')
+                else:
+                    resposta = resposta[0]
+                    if resposta == 'S':
+                        jogos.remove(jogo)
+                        print('Jogo deletado com sucesso.')
+                        break
+                    elif resposta == 'N':
+                        print('Operação cancelada.')
+                        break
+            break
+    # Informa caso nenhum jogo tenha sido encontrado.
+    if not encontrou:
+        print('Jogo não encontrado.')
+     
 jogos = []
 
 continuar = True
+
 # Loop principal do sistema.
 while continuar:
     print('='*20)
@@ -160,12 +197,12 @@ while continuar:
         alterar_status()
 
     elif opcao == '5':
-        print("Funcionalidade em desenvolvimento.")
+        deletar_jogo()
 
     elif opcao == '6':
         # Solicita confirmação antes de encerrar o programa.
         while True:
-            resposta = input('Deseja Realmente Sair? [S/N] ').strip().upper()
+            resposta = input('Deseja realmente sair? [S/N] ').strip().upper()
             if resposta == '':
                 print('Digite S ou N.')
             else:
@@ -181,4 +218,4 @@ while continuar:
         print('Opção inválida.')
 
     print('-'*20) 
-print('Programa finalizado.') 
+print('Programa finalizado.')
