@@ -82,7 +82,52 @@ def buscar_jogo():
                 break
         # Informa caso nenhum jogo tenha sido encontrado.
         if not encontrou:
-            print('Jogo não encontrado.') 
+            print('Jogo não encontrado.')
+
+# Altera o status de um jogo existente.
+def alterar_status():
+    # Solicita o nome do jogo até que um valor válido seja informado.
+    while True:
+        nome_jogo = input('Digite o nome do jogo: ').strip()
+        if nome_jogo == '':
+            print('Erro! O nome do jogo não pode estar vazio.')
+        else:
+            break
+    encontrou = False
+    # Percorre a lista de jogos para encontrar o jogo informado.
+    for jogo in jogos:
+        if nome_jogo.casefold() == jogo['Nome'].casefold():
+            encontrou = True
+            print('JOGO ENCONTRADO')
+            for campo, dado in jogo.items():
+                print(f'{campo}: {dado}')
+            # Exibe as opções de status e atualiza o jogo escolhido.
+            while True:
+                print('\nEscolha o novo status para o jogo')
+                print('1 - Quero jogar')
+                print('2 - Jogando')
+                print('3 - Finalizado')
+                print('4 - Abandonado')
+                status = input('Digite uma opção: ')
+                if status == '1':
+                    jogo['Status'] = 'Quero Jogar'
+                    break
+                elif status == '2':
+                    jogo['Status'] = 'Jogando'
+                    break
+                elif status == '3':
+                    jogo['Status'] = 'Finalizado'
+                    break
+                elif status == '4':
+                    jogo['Status'] = 'Abandonado'
+                    break        
+                else:
+                    print('Opção inválida.')  
+            print('Status do jogo atualizado com sucesso.')  
+            break
+    # Informa caso nenhum jogo tenha sido encontrado.     
+    if not encontrou:
+        print('Jogo não encontrado.')
       
 jogos = []
 
@@ -112,7 +157,7 @@ while continuar:
         buscar_jogo()
 
     elif opcao == '4':
-        print("Funcionalidade em desenvolvimento.")
+        alterar_status()
 
     elif opcao == '5':
         print("Funcionalidade em desenvolvimento.")
