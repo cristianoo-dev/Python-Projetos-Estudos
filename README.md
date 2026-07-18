@@ -70,16 +70,22 @@ Sistema de cadastro de pessoas desenvolvido em Python para praticar listas, dici
 
 ---
 
-### Projeto 05 - GameTracker 🚧
+### Projeto 05 - GameTracker ✅
 
 Sistema de gerenciamento de jogos desenvolvido em Python para praticar funções, organização de código e reutilização de lógica.
 
-**Funcionalidades (em desenvolvimento):**
+**Funcionalidades:**
 
-* Estrutura inicial do projeto
-* Menu interativo no terminal
-* Controle de fluxo com loop principal (`while`)
+* Cadastro de jogos (nome, plataforma e status)
+* Listagem de todos os jogos cadastrados
+* Busca de jogos por nome
+* Alteração do status dos jogos
+* Remoção de jogos com confirmação
+* Validação de entradas
+* Busca sem diferenciar letras maiúsculas e minúsculas (`casefold()`)
+* Tratamento de opções inválidas
 * Confirmação para saída do sistema
+* Organização e documentação do código com comentários
 
 ---
 
