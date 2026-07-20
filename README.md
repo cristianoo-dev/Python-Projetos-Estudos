@@ -89,6 +89,25 @@ Sistema de gerenciamento de jogos desenvolvido em Python para praticar funções
 
 ---
 
+### Projeto 06 - BugTracker 🚧
+
+Sistema de gerenciamento de bugs desenvolvido em Python para praticar persistência de dados utilizando JSON e organização do código em módulos.
+
+**Funcionalidades planejadas:**
+
+* Cadastro de bugs
+* Listagem de bugs cadastrados
+* Busca de bugs
+* Edição de informações dos bugs
+* Alteração de status dos bugs
+* Remoção de bugs
+* Validação de entradas
+* Persistência de dados utilizando arquivo JSON
+* Carregamento automático dos dados ao iniciar o sistema
+* Organização do código em diferentes módulos (`main.py` e `json_utils.py`)
+
+---
+
 ## Tecnologias
 
 * Python
