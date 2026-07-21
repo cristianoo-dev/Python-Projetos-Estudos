@@ -1,3 +1,6 @@
+import json
+
 def carregar_bugs():
-    bugs = []
+    with open("bugs.json") as arquivo:
+        bugs = json.load(arquivo)
     return bugs
