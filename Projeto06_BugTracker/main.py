@@ -40,7 +40,24 @@ def cadastrar_bug():
         bug['status'] = 'Aberto'
         return bug
 
-
+# Exibe todos os bugs cadastrados.
+def listar_bugs(bugs):
+    # Verifica se existem bugs cadastrados.
+    if not bugs:
+        print('Nenhum bug cadastrado.')
+        return
+    # Exibe cabelçalho da listagem.
+    print('='*20)
+    print('BUGS CADASTRADOS')
+    print('='*20)
+    print(f'Total de bugs cadastrados: {len(bugs)}')
+    print()
+    # Percorre a lista de exibe as informações de cada bug.
+    for i, bug in enumerate(bugs):
+        print(f'=- BUG {i+1} -=')
+        for campo, dado in bug.items():
+            print(f'{campo}: {dado}')
+        print('-'*20)
 
 bugs = carregar_bugs()
 
@@ -65,7 +82,7 @@ while continuar:
         print('\nBug cadastrado com sucesso.')
 
     elif opcao == '2':
-        print('Opção em desenvolvimento')
+        listar_bugs(bugs)
 
     elif opcao == '3':
         print('Opção em desenvolvimento')
@@ -93,5 +110,4 @@ while continuar:
                     break
     else:
         print('Opção inválida.')
-    print('-'*20)
 print('Programa finalzado.')
