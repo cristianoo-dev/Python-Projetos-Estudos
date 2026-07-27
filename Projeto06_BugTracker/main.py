@@ -1,7 +1,7 @@
 from json_utils import carregar_bugs, salvar_bugs
 
-# Cadastra um novo bug solicitando as informações ao usuário.
-def cadastrar_bug():
+# Cadastra um novo bug, adiciona à lista e salva no JSON.
+def cadastrar_bug(bugs):
         bug = {}
         # Solicita o nome do bug até que um valor válido seja informado.
         while True:
@@ -38,7 +38,8 @@ def cadastrar_bug():
             else:
                 print('Opção inválida.')
         bug['status'] = 'Aberto'
-        return bug
+        bugs.append(bug)
+        salvar_bugs(bugs)
 
 # Exibe todos os bugs cadastrados.
 def listar_bugs(bugs):
@@ -76,9 +77,7 @@ while continuar:
     print('6 - Sair')
     opcao = input('Escolha uma opção: ')
     if opcao == '1':
-        bug = cadastrar_bug()
-        bugs.append(bug)
-        salvar_bugs(bugs)
+        cadastrar_bug(bugs)
         print('\nBug cadastrado com sucesso.')
 
     elif opcao == '2':
