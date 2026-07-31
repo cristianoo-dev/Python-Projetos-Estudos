@@ -82,6 +82,48 @@ def buscar_bug(bugs):
     if not encontrou:
         print('Bug não encontrado.')
 
+# Altera o status de um bug existente.
+def alterar_status(bugs):
+    # Solicita título do bug até que um valor válido seja informado.
+    while True:
+        titulo_bug = input('Digite o título do bug: ').strip()
+        if titulo_bug == '':
+            print('ERRO! O título do bug não pode estar vazio.')
+        else:
+            break
+    encontrou = False
+    # Percorre a lista de bugs para encontrar o bug informado.
+    for bug in bugs:
+        if titulo_bug.casefold() == bug['titulo'].casefold():
+            encontrou = True
+            print('BUG ENCONTRADO')
+            for campo, dado in bug.items():
+                print(f'{campo}: {dado}')
+            # Exibe as opções de status e atualiza o bug escolhido.
+            while True:
+                print('\nEscolha o novo status para o bug')
+                print('1 - Aberto')
+                print('2 - Em tratamento')
+                print('3 - Fechado')
+                status = input('Digite uma opção: ')
+                if status == '1':
+                    bug['status'] = 'Aberto'
+                    break
+                elif status == '2':
+                    bug['status'] = 'Em tratamento'
+                    break
+                elif status == '3':
+                    bug['status'] = 'Fechado'
+                    break
+                else:
+                    print('Opção inválida.')
+            print(f'Status atualizado para: {bug['status']}')
+            salvar_bugs(bugs)
+            break
+        # Informa caso nenhum bug tenha sido encontrado
+    if not encontrou:
+        print('Bug não encontrado')       
+
 bugs = carregar_bugs()
 
 continuar = True
