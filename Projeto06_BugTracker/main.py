@@ -15,7 +15,7 @@ def cadastrar_bug(bugs):
     while True:
         descricao = input('Descrição sobre o bug: ').strip()
         if descricao == '':
-            print('Erro! A descrição não pode estar vazia.')  
+            print('ERRO! A descrição não pode estar vazia.')  
         else:
             bug['descricao'] = descricao
             break
@@ -62,7 +62,7 @@ def listar_bugs(bugs):
 
 # Busca um bug pelo título informado pelo usuário.
 def buscar_bug(bugs):
-    # Busca um bug pelo título informado pelo usuário.
+    # Solicita título do bug até que um valor válido seja informado.
     while True:
         titulo_busca = input('Digite o título do bug: ').strip()
         if titulo_busca == '':
@@ -117,16 +117,16 @@ def alterar_status(bugs):
                     break
                 else:
                     print('Opção inválida.')
-            print(f'Status atualizado para: {bug['status']}')
+            print(f"Status atualizado para: {bug['status']}")
             salvar_bugs(bugs)
             break
         # Informa caso nenhum bug tenha sido encontrado
     if not encontrou:
-        print('Bug não encontrado')   
+        print('Bug não encontrado.')   
 
 # Remove um bug cadastrado.
 def remover_bug(bugs):
-    # Solicita o título do bug até que um valor valido seja informado.
+    # Solicita o título do bug até que um valor válido seja informado.
     while True:
         titulo_remover = input('Digite o título do bug: ').strip()
         if titulo_remover == '':
