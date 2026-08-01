@@ -122,7 +122,44 @@ def alterar_status(bugs):
             break
         # Informa caso nenhum bug tenha sido encontrado
     if not encontrou:
-        print('Bug não encontrado')       
+        print('Bug não encontrado')   
+
+# Remove um bug cadastrado.
+def remover_bug(bugs):
+    # Solicita o título do bug até que um valor valido seja informado.
+    while True:
+        titulo_remover = input('Digite o título do bug: ').strip()
+        if titulo_remover == '':
+            print('ERRO! O título do bug não pode estar vazio.')
+        else:
+            break
+    encontrou = False
+    # Percorre a lista de bugs em busca do bug informado.
+    for bug in bugs:
+        if titulo_remover.casefold() == bug['titulo'].casefold():
+            encontrou= True
+            print('BUG ENCONTRADO')
+            for campo, dado in bug.items():
+                print(f'{campo}: {dado}')
+            # Solicita a confirmação do usuário de remover o bug.
+            while True:
+                resposta = input('Deseja realmente remover este bug? [S/N]').strip().upper()
+                if resposta == '':
+                    print('Digite S ou N.')
+                else:
+                    resposta = resposta[0]
+                    if resposta == 'S':
+                        bugs.remove(bug)
+                        salvar_bugs(bugs)
+                        print('Bug removido com sucesso.')
+                        break
+                    elif resposta == 'N':
+                        print('Operação cancelada.')
+                        break
+            break
+    # Informa caso nenhum bug tenha sido encontrado.
+    if not encontrou:
+        print('Bug não encontrado.')
 
 bugs = carregar_bugs()
 
@@ -151,10 +188,10 @@ while continuar:
         buscar_bug(bugs)
 
     elif opcao == '4':
-        print('Opção em desenvolvimento')
+        alterar_status(bugs)
 
     elif opcao == '5':
-        print('Opção em desenvolvimento')
+        remover_bug(bugs)
 
     elif opcao == '6':
         # Solicita confirmação antes de encerrar o programa.
