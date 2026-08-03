@@ -1,113 +1,73 @@
 # Python Projetos e Estudos
 
-Repositório criado para registrar minha evolução em Python através de projetos práticos e exercícios.
+Repositório criado para registrar minha evolução em Python através de projetos práticos, aplicando novos conceitos conforme avanço nos estudos.
+
+A ideia deste repositório é documentar minha jornada de aprendizado, desde os fundamentos da linguagem até projetos com conceitos mais próximos de aplicações reais.
 
 ## Projetos
 
-### Projeto 01 - Caixa Eletrônico ✅
+### 01 - Caixa Eletrônico ✅
 
-Sistema simples de caixa eletrônico desenvolvido em Python.
+Primeiro projeto desenvolvido em Python, focado em lógica de programação, estruturas condicionais e validação de entradas.
 
-**Funcionalidades:**
-
-* Consulta de saldo
-* Depósito
-* Saque
-* Validação de depósitos inválidos
-* Validação de saques inválidos
-* Confirmação de saída do programa
+🔗 [Acessar projeto](./01-Caixa-Eletronico)
 
 ---
 
-### Projeto 02 - Sistema de Login ✅
+### 02 - Sistema de Login ✅
 
-Sistema de autenticação desenvolvido em Python.
+Sistema de autenticação desenvolvido para praticar validação de dados, controle de tentativas e estruturas de decisão.
 
-**Funcionalidades:**
-
-* Login com usuário e senha cadastrados
-* Controle de tentativas de acesso
-* Bloqueio após múltiplas tentativas inválidas
-* Mensagens específicas para usuário e/ou senha incorretos
-* Validação de campos obrigatórios
-* Tratamento de entradas vazias
-* Exibição das tentativas disponíveis ao usuário
+🔗 [Acessar projeto](./02-Sistema-Login)
 
 ---
 
-### Projeto 03 - Lista de Tarefas ✅
+### 03 - Lista de Tarefas ✅
 
-Sistema simples de gerenciamento de tarefas desenvolvido em Python.
+Sistema de gerenciamento de tarefas desenvolvido para praticar listas, manipulação de dados e controle de fluxo.
 
-**Funcionalidades:**
-
-* Menu interativo no terminal
-* Adição de tarefas com validação de entrada
-* Listagem de tarefas com numeração
-* Tratamento de lista vazia
-* Controle de fluxo com loop principal (`while`)
-* Confirmação para saída do sistema
-* Organização e documentação do código com comentários
+🔗 [Acessar projeto](./03-Lista-Tarefas)
 
 ---
 
-### Projeto 04 - Cadastro de Pessoas ✅
+### 04 - Cadastro de Pessoas ✅
 
-Sistema de cadastro de pessoas desenvolvido em Python para praticar listas, dicionários e manipulação de dados.
+Sistema de cadastro desenvolvido para praticar listas, dicionários, funções e tratamento de exceções.
 
-**Funcionalidades:**
-
-* Cadastro de pessoas (nome, idade e cidade)
-* Listagem de todos os cadastros
-* Busca de pessoas por nome
-* Edição de cadastros
-* Remoção de pessoas cadastradas
-* Validação de entradas
-* Tratamento de erros com `try/except`
-* Tratamento de opções inválidas
-* Confirmação para saída do sistema
-* Organização e documentação do código com comentários
+🔗 [Acessar projeto](./04-Cadastro-Pessoas)
 
 ---
 
-### Projeto 05 - GameTracker ✅
+### 05 - GameTracker ✅
 
-Sistema de gerenciamento de jogos desenvolvido em Python para praticar funções, organização de código e reutilização de lógica.
+Sistema de gerenciamento de jogos desenvolvido para praticar organização de código, funções e manipulação de dados.
 
-**Funcionalidades:**
-
-* Cadastro de jogos (nome, plataforma e status)
-* Listagem de todos os jogos cadastrados
-* Busca de jogos por nome
-* Alteração do status dos jogos
-* Remoção de jogos com confirmação
-* Validação de entradas
-* Busca sem diferenciar letras maiúsculas e minúsculas (`casefold()`)
-* Tratamento de opções inválidas
-* Confirmação para saída do sistema
-* Organização e documentação do código com comentários
+🔗 [Acessar projeto](./05-GameTracker)
 
 ---
 
-### Projeto 06 - BugTracker ✅
+### 06 - BugTracker ✅
 
-Sistema de gerenciamento de bugs desenvolvido em Python para praticar persistência de dados com JSON, organização do código em módulos e reutilização de funções.
+Sistema de gerenciamento de bugs desenvolvido para praticar persistência de dados com JSON, criação de módulos e organização de código.
 
-**Funcionalidades:**
-
-* Cadastro de bugs
-* Listagem de bugs cadastrados
-* Busca de bugs por título
-* Alteração do status dos bugs
-* Remoção de bugs com confirmação
-* Validação de entradas
-* Persistência de dados utilizando arquivo JSON
-* Carregamento automático dos dados ao iniciar o sistema
-* Organização do código em módulos (`main.py` e `json_utils.py`)
+🔗 [Acessar projeto](./06-BugTracker)
 
 ---
 
-## Tecnologias
+## Próximos estudos
+
+Os próximos projetos terão como objetivo aplicar novos conceitos da linguagem e aproximar os estudos de cenários reais de desenvolvimento.
+
+Possíveis próximos temas:
+
+* Consumo de APIs
+* Programação Orientada a Objetos (POO)
+* Banco de dados
+* Desenvolvimento de aplicações mais completas
+
+---
+
+## Tecnologias utilizadas
 
 * Python
 * Git
